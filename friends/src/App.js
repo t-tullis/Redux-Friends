@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import FriendsList from './components/FriendsList';
+import Nav from './components/Nav'
 
 import Login from './components/Login';
 
@@ -13,13 +14,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <header className="App-header">
-          <h2>HomePage App JS</h2>
-          <ul>
-            <li>
-              <Link to='/login'>Log in</Link>
-            </li>
-          </ul>
-            <Route path="/login" component={Login} />
+            <Nav />
+          <h2>Redux Friends</h2>
+            <Route exact path="/login" component={Login} />
             <PrivateRoute exact path='/friends-list' component={FriendsList} />
           </header>
         </div>

@@ -1,10 +1,6 @@
+import { combineReducers } from 'redux';
+import { friendsReducer } from './friendsReducer';
 
-const initialState = {
-    friends: []
-}
-
-const reducer = (state = initialState, action) => {
-    console.log('reducer', action)
-}
-
-export default reducer;
+export default combineReducers({
+  friendsReducer
+});
