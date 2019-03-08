@@ -16,7 +16,7 @@ class App extends Component {
           <header className="App-header">
             <Nav />
           <h2>Redux Friends</h2>
-            <Route exact path="/login" component={Login} />
+            <Route path="/login" component={Login} />
             <PrivateRoute exact path='/friends-list' component={FriendsList} />
           </header>
         </div>

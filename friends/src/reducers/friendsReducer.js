@@ -1,4 +1,4 @@
-import {FETCHING_DATA, FETCHING_DATA_SUCCESS, FETCHING_DATA_ERROR} from "../actions";
+import {FETCHING_DATA, FETCHING_DATA_SUCCESS, FETCHING_DATA_ERROR, LOG_OUT} from "../actions";
 
 const initialState = {
     loadingFriends: false,
@@ -28,6 +28,12 @@ export const friendsReducer = (state = initialState, action) => {
           isLoading: false,
           error: action.payload
         };
+        case LOG_OUT:
+        return{
+          ...state,
+          isLoading: false,
+          friends: []
+        }
         default:
         return state;
     }

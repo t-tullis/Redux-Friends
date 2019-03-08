@@ -16,7 +16,6 @@ class FriendsList extends React.Component {
     }
 
     logOut = e => {
-        e.preventDefault();
         this.props.logOut()
         this.props.history.push('/')
   }
@@ -25,9 +24,9 @@ class FriendsList extends React.Component {
         return(
             <div>
                 <h1>Friends list</h1>
-                {/* {this.props.loadingFriends && (
+                {this.props.loadingFriends && (
                     <Loader type="Puff" color="white" height={50} width={50} />
-                )} */}
+                )}
                 <Friends friends={this.props.friends} />
                 <button onClick={this.logOut}>Log Out</button>
             </div>
