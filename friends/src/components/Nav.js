@@ -1,11 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../App.css'
 const Nav = () => {
     return(
     <ul className='navigation'>
         <li>
-          <Link to='/login'>Log in</Link>
+          <NavLink to='/login'>Log in</NavLink>
+        </li>
+        <li>
+          <NavLink to='/add-friend'>Add Friend</NavLink>
         </li>
       </ul>
     )

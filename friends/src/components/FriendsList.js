@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner'
 
 import Friends from './Friends'
+import AddFriend from './AddFriend';
 
 import { logOut } from '../actions';
 import {getData} from '../actions';
@@ -27,6 +28,7 @@ class FriendsList extends React.Component {
                 {this.props.loadingFriends && (
                     <Loader type="Puff" color="white" height={50} width={50} />
                 )}
+                <AddFriend />
                 <Friends friends={this.props.friends} />
                 <button onClick={this.logOut}>Log Out</button>
             </div>
